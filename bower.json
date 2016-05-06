@@ -1,0 +1,21 @@
+{
+  "name": "flisolIPN",
+  "homepage": "https://github.com/dmouse/silex-demo",
+  "authors": [
+    "David Flores <dmousex@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

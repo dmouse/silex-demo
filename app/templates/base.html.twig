@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FLISoL</title>
+  <link href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body class="">
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">FLISoL 2016</h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li class="">
+                  <a href="{{ path("home") }}">Inicio</a>
+                </li>
+                <li><a href="{{ path("conferences") }}">Conferencias Propuestas</a></li>
+                <li><a href="#">Talleres Propuestos</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="inner cover">
+          {% block inner_cover %}
+          {% endblock %}
+        </div>
+
+        <div class="mastfoot">
+          <div class="inner">
+            <p>FLISoL 2016.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/vendor/jquery/dist/jquery.min.js"><\/script>')</script>
+  <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

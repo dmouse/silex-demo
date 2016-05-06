@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block inner_cover %}
+
+<div class="row">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Titulo</th>
+        <th>Descripción</th>
+        <th>Autor</th>
+        <th>Horario</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for conference in conferences if conferences is not empty %}
+        <tr>
+          <td>
+            <a href="{{ path('conference', { 'conference': conference.id}) }}">
+              {{ conference.id }}
+            </a>
+          </td>
+          <td>
+            <a href="{{ path('conference', { 'conference': conference.id}) }}">
+              {{ conference.title }}
+            </a>
+          </td>
+          <td>{{ conference.description }}</td>
+          <td>{{ conference.author }}</td>
+          <td>{{ conference.schedule }}</td>
+          {% if (app.session.get('user')) %}
+              <td>
+                <a href="{{ path('conference-edit', { 'id': conference.id}) }}" class="btn btn-info btn-xs">
+                  Editar
+                </a>
+              </td>
+              <td>
+                <a href="#" class="btn btn-danger btn-xs">
+                  Eliminar
+                </a>
+              </td>
+          {% endif %}
+        </tr>
+        {% else %}
+        <p>
+          Aun no tenemos conferencias registradas.<br><br>
+          <a href="{{ path("register") }}" class="btn btn-success">Registra una.</a>
+        </p>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{{ path("register") }}" class="btn btn-success btn-lg">Registra una conferencia.</a>
+
+</div>
+
+{% endblock %}
